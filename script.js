@@ -3,8 +3,8 @@ const field = document.getElementById('field');
 const scoreEl = document.getElementById('score');
 const missedEl = document.getElementById('missed');
 
-const MAX_RADIUS = 100;
-const SHRINK_TIME = 5000;
+const MAX_RADIUS = 10;
+const SHRINK_TIME = Number(window.innerWidth) * 2.25;
 const PAUSE = 300;
 
 let score = 0;
@@ -27,8 +27,8 @@ function spawnCircle() {
 
   circle.style.left = `${x}px`;
   circle.style.top = `${y}px`;
-  circle.style.width = `${radius * 2}px`;
-  circle.style.height = `${radius * 2}px`;
+  circle.style.width = `${radius * 0.02}vh`;
+  circle.style.height = `${radius * 0.02}vw`;
 
   field.appendChild(circle);
 
@@ -65,8 +65,8 @@ function spawnCircle() {
       return;
     }
 
-    circle.style.width = `${currentSize}px`;
-    circle.style.height = `${currentSize}px`;
+    circle.style.width = `${currentSize}vh`;
+    circle.style.height = `${currentSize}vw`;
 
     requestAnimationFrame(frame);
   }
