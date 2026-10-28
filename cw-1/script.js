@@ -13,7 +13,7 @@ let missed = 0;
 function spawnCircle() {
   const circle = document.createElement('img');
 
-  circle.src = 'tilin-gzdoom.gif';
+  circle.src = 'img/tilin-gzdoom.gif';
   circle.className = 'circle';
 
   const radius = MAX_RADIUS;
